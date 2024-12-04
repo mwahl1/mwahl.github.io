@@ -34,9 +34,9 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="container" data-aos="fade-up">
-            <img src="assets/profile.jpg" alt="Your Photo" class="profile-pic" data-aos="zoom-in" data-aos-delay="100">
+            <img src="assets/profile.jpg" alt="Marshal Wahl Photo" class="profile-pic" data-aos="zoom-in" data-aos-delay="100">
             <h2 data-aos="fade-up" data-aos-delay="200">Hi, I'm Marshal Wahl</h2>
-            <p data-aos="fade-up" data-aos-delay="300">I'm a [Your Profession, e.g., Software Developer] passionate about building impactful projects.</p>
+            <p data-aos="fade-up" data-aos-delay="300">I'm a Software Developer passionate about building impactful projects.</p>
             <a href="#projects" class="btn" data-aos="fade-up" data-aos-delay="400">View My Work</a>
         </div>
     </header>
@@ -45,7 +45,7 @@
     <section id="about" class="about">
         <div class="container" data-aos="fade-in">
             <h2>About Me</h2>
-            <p>[Write a brief biography about yourself, your background, interests, and what drives you.]</p>
+            <p>I am Marshal Wahl, a dedicated Software Developer with a passion for creating dynamic and user-friendly applications. My journey in technology has equipped me with skills in full-stack development, problem-solving, and continuous learning.</p>
             <p>You can download my <a href="resume.pdf" target="_blank">Resume</a> here.</p>
         </div>
     </section>
@@ -108,8 +108,17 @@
         </div>
     </footer>
 
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("user_1a2b3c4d5e6f7g8h9i0j"); // Replace with your EmailJS user ID
+       })();
+    </script>
+
     <!-- AOS JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- Your script -->
     <script src="script.js"></script>
 </body>
 </html>

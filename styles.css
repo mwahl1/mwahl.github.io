@@ -595,3 +595,20 @@ footer p {
     background-size: cover;
     /* ... existing styles ... */
 }
+
+
+.repo-topics {
+    margin-top: 10px;
+}
+
+.topic-badge {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
