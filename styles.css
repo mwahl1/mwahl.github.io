@@ -270,22 +270,31 @@ section a {
     transition: color 0.3s ease;
 }
 
+/* Modify the ::after pseudo-element for section a tags */
 section a::after {
     content: '';
-    display: block;
+    position: absolute; /* Position absolutely to prevent affecting document flow */
+    left: 0;
+    bottom: -2px; /* Adjust as needed to position the underline */
     width: 0;
     height: 2px;
     background: #ff5722;
     transition: width 0.3s;
 }
 
+/* Ensure the parent a tag is positioned relatively */
+section a {
+    color: #ff5722;
+    text-decoration: none;
+    position: relative; /* Necessary for the absolutely positioned ::after */
+    transition: color 0.3s ease;
+}
+
+/* On hover, expand the width of the underline */
 section a:hover::after {
     width: 100%;
 }
 
-section a:hover {
-    color: #e64a19;
-}
 
 /* Projects Section */
 .repo-list {

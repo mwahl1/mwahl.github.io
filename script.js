@@ -77,7 +77,7 @@ contactForm.addEventListener('submit', function(e) {
     }
 
     // Send email using EmailJS
-    emailjs.send("service_e3l4axz", "template_96ng71h", { // Replace with your Service ID and Template ID
+    emailjs.send("service_rmj8168", "template_96ng71h", { // Replace with your Service ID and Template ID
         from_name: name,
         from_email: email,
         message: message
@@ -93,13 +93,14 @@ contactForm.addEventListener('submit', function(e) {
 });
 
 // Handle Navigation Bar Style on Scroll
-    window.addEventListener('scroll', () => {
-        const nav = document.querySelector('nav');
-        if (window.scrollY > 50) {
-            nav.classList.add('scrolled');
-        } else {
-            nav.classList.remove('scrolled');
-        }
+    // Handle Navigation Bar Style on Scroll
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
 
     // Update Progress Bar
     const progressBar = document.getElementById('progress-bar');
