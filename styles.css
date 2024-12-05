@@ -621,3 +621,196 @@ footer p {
     margin-bottom: 5px;
 }
 
+
+/* Skills Section */
+.skills {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.skills h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: #333;
+}
+
+.skill-category {
+    margin-bottom: 30px;
+}
+
+.skill-category h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #555;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+}
+
+.skill img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.skill span {
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+}
+
+/* Soft Skills */
+.soft-skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.soft-skills-list li {
+    background-color: #f0f0f0;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .skill {
+        width: 80px;
+    }
+
+    .skill img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .skill span {
+        font-size: 14px;
+    }
+}
+
+/* Soft Skills Section */
+.skill-category h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #555;
+}
+
+.soft-skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+.soft-skill {
+    background-color: #f0f0f0;
+    padding: 15px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: default;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* For tooltip positioning */
+}
+
+.soft-skill i {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #ff5722;
+    transition: color 0.3s;
+}
+
+.soft-skill:hover {
+    background-color: #ff5722;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.soft-skill:hover i {
+    color: #fff;
+}
+
+/* Tooltip Styles */
+.soft-skill[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%; /* Position above the badge */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0,0,0,0.75);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.soft-skill[data-tooltip]:hover::after {
+    opacity: 1;
+}
+
+.soft-skill[data-tooltip]:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 115%; /* Slightly above the tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.75) transparent transparent transparent;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.soft-skill[data-tooltip]:hover::before {
+    opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .soft-skill {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .soft-skill i {
+        font-size: 18px;
+    }
+
+    /* Adjust tooltip positioning on smaller screens if necessary */
+    .soft-skill[data-tooltip]:hover::after {
+        bottom: 135%; /* Adjust to prevent overlap */
+    }
+
+    .soft-skill[data-tooltip]:hover::before {
+        bottom: 125%; /* Adjust accordingly */
+    }
+}
+
